@@ -14,12 +14,15 @@ export const VideoContextProvider = ({ children }) => {
   const [watched, setWatched] = useState([]);
   // setting individual detail of video
   const [videoDetail, setVideoDetail] = useState();
+
+  const [loader, setLoader] = useState(true)
   const fakeData = async () => {
     try {
       const {
         data: { videos },
       } = await fakeFetch("https://example.com/api/videos");
       setVideoList(videos);
+      setLoader(false)
     } catch (error) {
       console.error(error);
     }
@@ -41,7 +44,8 @@ export const VideoContextProvider = ({ children }) => {
           watched,
           setWatched,
           setVideoDetail,
-          videoDetail
+          videoDetail,
+          loader
         }}
       >
         {children}

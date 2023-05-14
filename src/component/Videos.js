@@ -12,8 +12,12 @@ export const Videos = () => {
     watched,
     watchLater,
     setWatched,
-    setVideoDetail
+    setVideoDetail,
+    loader
   } = useContext(VideoListContext);
+
+  
+
 
   const navigate = useNavigate()
 
@@ -42,16 +46,15 @@ export const Videos = () => {
   return (
     <div>
       <h1 className="heading">All Videos</h1>
+      <div className="loader">{loader ? 'Loading....': null}</div>
       <div className="content-container">
         {videoList &&
           videoList.map((video) => {
-            const { id, title, description, url, thumbnail, duration } = video;
+            const { id, title, thumbnail } = video;
             return (
               <div className="card-container" key={id}>
                 <img src={thumbnail} alt={title} />
                 <p>Title:{title}</p>
-
-
                 <Link className="content-link" to='/videoDetail' onClick={()=>videoDetail(video)}>video Detail</Link>
                 <div className="btn-container">
                   <button onClick={() => likeBtnHandle(video, id)}>
