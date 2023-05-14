@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+  height: 3rem;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link:hover {
+  background-color: snow;
+}
+.nav-link:focus {
+  color: rebeccapurple;
+}
+
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  height: 200px;
+}
+
+.home-link {
+  text-decoration: none;
+  background-color: cadetblue;
   color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  width: 300px;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 380px;
+  padding: 10px;
+  /* border:2px solid black; */
+  box-shadow: 0 0 5px 2px gainsboro;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-container > * {
+  margin: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  background-color:honeydew;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.content-link{
+  width: 80px;
+  text-decoration: none;
+  color: black;
+}
+
+.content-link:hover{
+  color: blue;
+}
+
+.videoDetail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+
+.detail-card-container{
+  display: flex;
+  box-shadow: 0 0 5px 2px gainsboro;
+}
+
+.detail-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:300px;
+  padding: 10px;
+}
+.videoDetail img{
+  width: 300px;
+}
+
+.heading{
+  text-align: center;
 }
